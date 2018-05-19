@@ -22,8 +22,6 @@ const (
 	spacing   float64 = 1.5             // line spacing
 	fontFile  string  = "./FZDBSJW.TTF" // font file
 	dpi       float64 = 72              // screen resolution in dots per inch
-	// lineCount int     = 63              // 每行字数
-	ss = 1
 )
 
 var (
@@ -103,7 +101,7 @@ func main() {
 
 	// 生成标题
 	now := time.Now()
-	title := fmt.Sprintf("%d年%d月%d日	星期%d	%02d:%02d", now.Year(), now.Month(), now.Day(), now.Weekday(), now.Hour(), now.Minute())
+	title := fmt.Sprintf("%d年%d月%d日  星期%d  %02d:%02d", now.Year(), now.Month(), now.Day(), now.Weekday(), now.Hour(), now.Minute())
 
 	// 计算标题的位置
 	x := (width - (len(title) * 5)) / 2
